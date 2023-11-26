@@ -16,3 +16,10 @@ Some of the key features implemented in this project :
 -> Make the decay factor dynamic.
 -> Decay will be implemented such that every day that passes will reduce the value of every search count by a given factor. So for instance if today a word has 50 count and the decay factor is 2 tomorrow that same word will have 25count.
 -> New searches will add 1 to the value of the word.
+
+
+Rev 2.0 :  
+  -> Added Exceptions 
+  -> Added stratergies for decay
+  -> Created Singleton approach for decay.
+  
