@@ -53,12 +53,15 @@ public class Client {
         switch (choice){
             case 1 : {
                 requestDTO.operationType = OperationType.SEARCH;
+                break;
             }
             case 2 : {
                 requestDTO.operationType = OperationType.GET_SUGGESTIONS;
+                break;
             }
             case 3 :{
                 requestDTO.operationType = OperationType.DECAY;
+                break;
             }
             default:{
                 requestDTO.operationType = OperationType.EXIT;

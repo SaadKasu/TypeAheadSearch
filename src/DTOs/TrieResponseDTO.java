@@ -5,6 +5,8 @@ import Models.SearchTerm;
 
 import java.util.ArrayList;
 
-public class ClientResponseDTO {
+public class TrieResponseDTO {
     public OperationStatus operationStatus;
+    public SearchTerm searchTerm;
+    public ArrayList<String> topSuggestions;
 }
