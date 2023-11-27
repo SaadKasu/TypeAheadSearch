@@ -37,6 +37,7 @@ public class ClientController {
             }
             case DECAY : {
                 responseDTO = performDecayOperation();
+                break;
             }
             case EXIT : {
                 responseDTO.operationStatus = OperationStatus.EXIT;
@@ -64,7 +65,7 @@ public class ClientController {
         System.out.println("Please enter the term you want to search for - ");
         Scanner inp = new Scanner(System.in);
         String input = inp.nextLine();
-        requestDTO.searchTerm = input;
+        requestDTO.term = input;
         try{
             TypeAheadSearchResponseDTO typeAheadSearchResponseDTO = searchController.searchForATerm(requestDTO);
             System.out.println("The count For the term has been incremented in the system to - " + typeAheadSearchResponseDTO.currentFrequency);
@@ -82,7 +83,7 @@ public class ClientController {
         System.out.println("Please enter the term you want to get suggestions for - ");
         Scanner inp = new Scanner(System.in);
         String input = inp.nextLine();
-        requestDTO.searchTerm = input;
+        requestDTO.term = input;
         try{
             TypeAheadSearchResponseDTO typeAheadSearchResponseDTO = searchController.getSuggestions(requestDTO);
             System.out.println("The top suggestions for this query are :");

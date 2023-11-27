@@ -1,37 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="02cffacb-1eee-4922-ad6a-79535a256f92" name="Changes" comment="Initial Commit with Models, Clients, Controllers and Service Structure">
-      <change afterPath="$PROJECT_DIR$/src/CustomMetadatas/CustomMetadata.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/DTOs/RepositoryDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/DTOs/TrieRequestDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/DTOs/TrieResponseDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/DecayOperationStratergies/DecayByFactorOperation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/DecayOperationStratergies/DecayOperation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/DecayOperationStratergies/NoDecayOperation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Exceptions/GetSuggestionsException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Exceptions/PerformDecayException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Exceptions/SearchTermException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Helpers/SortSuggestions.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Models/BaseClass.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Models/InsertOperation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Models/SearchOperation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Models/TypeOfDecayOperation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Services/TrieService.java" afterDir="false" />
+    <list default="true" id="02cffacb-1eee-4922-ad6a-79535a256f92" name="Changes" comment="REV 2.0. Most functionality added. Testing pending">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Client/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Client/Client.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controllers/ClientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controllers/ClientController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controllers/TypeAheadSearchController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controllers/TypeAheadSearchController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DTOs/ClientResponseDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DTOs/ClientResponseDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DTOs/TrieRequestDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DTOs/TrieRequestDTO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/DTOs/TypeAheadSearchRequestDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DTOs/TypeAheadSearchRequestDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DTOs/TypeAheadSearchResponseDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DTOs/TypeAheadSearchResponseDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Exceptions/CreateNewTypeAheadSearchException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exceptions/CreateNewTypeAheadSearchException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Models/SearchTerm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Models/SearchTerm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Models/Trie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Models/Trie.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Models/TypeAheadSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Models/TypeAheadSearch.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repositories/SearchTermRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repositories/SearchTermRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repositories/TrieRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repositories/TypeAheadSearchRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repositories/TypeAheadSearchRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Helpers/SortSuggestions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Helpers/SortSuggestions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Services/TrieService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/TrieService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Services/TypeAheadSearchService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/TypeAheadSearchService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -68,6 +44,26 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RunManager">
+    <configuration name="Client" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Client.Client" />
+      <module name="TypeAheadSearch" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Client.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Client" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -84,7 +80,14 @@
       <option name="project" value="LOCAL" />
       <updated>1700936874298</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="REV 2.0. Most functionality added. Testing pending">
+      <created>1701020654425</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1701020654425</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -100,6 +103,12 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial Commit with Models, Clients, Controllers and Service Structure" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial Commit with Models, Clients, Controllers and Service Structure" />
+    <MESSAGE value="REV 2.0. Most functionality added. Testing pending" />
+    <option name="LAST_COMMIT_MESSAGE" value="REV 2.0. Most functionality added. Testing pending" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/TypeAheadSearch$Client.ic" NAME="Client Coverage Results" MODIFIED="1701107342287" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>Client.*</FILTER>
+    </SUITE>
   </component>
 </project>

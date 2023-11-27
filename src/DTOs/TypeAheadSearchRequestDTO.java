@@ -7,7 +7,7 @@ import Services.TrieService;
 import Services.TypeAheadSearchService;
 
 public class TypeAheadSearchRequestDTO {
-    public String searchTerm;
+    public String term;
     public TypeAheadSearch typeAheadSearch;
 
     public TypeAheadSearchService typeAheadSearchService;

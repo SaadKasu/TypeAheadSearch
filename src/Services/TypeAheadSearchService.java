@@ -19,6 +19,7 @@ public class TypeAheadSearchService {
     public TypeAheadSearchResponseDTO createNewTypeAheadSystem(TypeAheadSearchRequestDTO requestDTO) throws CreateNewTypeAheadSearchException{
         TypeAheadSearch typeAheadSearch = new TypeAheadSearch();
         typeAheadSearch.setNoOfWordsRecommended(CustomMetadata.noOfSuggestions);
+        requestDTO.typeAheadSearch = typeAheadSearch;
         insertToRepository(requestDTO);
         TypeAheadSearchResponseDTO responseDTO = new TypeAheadSearchResponseDTO();
         responseDTO.typeAheadSearch = typeAheadSearch;
@@ -31,7 +32,7 @@ public class TypeAheadSearchService {
 
         TrieRequestDTO trieRequestDTO = new TrieRequestDTO();
         trieRequestDTO.wordRepository = typeAheadSearch.getWordRepository();
-        trieRequestDTO.searchTerm = requestDTO.searchTerm;
+        trieRequestDTO.term = requestDTO.term;
         trieRequestDTO.searchTermRepository = requestDTO.searchTermRepository;
 
         TrieResponseDTO trieResponseDTO = requestDTO.trieService.insertOrIncrementSearchTerm(trieRequestDTO);
@@ -45,10 +46,11 @@ public class TypeAheadSearchService {
 
         TrieRequestDTO trieRequestDTO = new TrieRequestDTO();
         trieRequestDTO.wordRepository = typeAheadSearch.getWordRepository();
-        trieRequestDTO.searchTerm = requestDTO.searchTerm;
+        trieRequestDTO.term = requestDTO.term;
         trieRequestDTO.searchTermRepository = requestDTO.searchTermRepository;
 
         TrieResponseDTO trieResponseDTO = requestDTO.trieService.getTopSuggestions(trieRequestDTO);
+        responseDTO.suggestions = trieResponseDTO.topSuggestions;
         responseDTO.operationStatus = OperationStatus.SUCCESSFUL;
         return responseDTO;
     }

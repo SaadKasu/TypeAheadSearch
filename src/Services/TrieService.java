@@ -16,17 +16,16 @@ import java.util.Comparator;
 public class TrieService {
     public TrieResponseDTO insertOrIncrementSearchTerm(TrieRequestDTO requestDTO) throws SearchTermException{
         Trie wordRepositoryHead = requestDTO.wordRepository;
-        String term = requestDTO.searchTerm;
         TrieResponseDTO responseDTO = new TrieResponseDTO();
         responseDTO.searchTerm = traverseTheTrie(requestDTO,0,wordRepositoryHead);
         responseDTO.operationStatus = OperationStatus.SUCCESSFUL;
         return responseDTO;
     }
     private SearchTerm traverseTheTrie(TrieRequestDTO requestDTO, int index, Trie node) throws SearchTermException{
-        if (index == requestDTO.searchTerm.length()){
+        if (index == requestDTO.term.length()){
             SearchTerm searchTerm;
             if (node.getStateOfTrie() == TrieState.WORD_ENDS){
-                RepositoryDTO repositoryDTO = requestDTO.searchTermRepository.getSearchTermByName(requestDTO.searchTerm);
+                RepositoryDTO repositoryDTO = requestDTO.searchTermRepository.getSearchTermByName(requestDTO.term);
                 if (repositoryDTO.searchOperation == SearchOperation.NOT_FOUND)
                     throw new SearchTermException();
                 searchTerm = repositoryDTO.searchTerm;
@@ -35,15 +34,16 @@ public class TrieService {
             else{
                 node.setStateOfTrie(TrieState.WORD_ENDS);
                 searchTerm = new SearchTerm();
+                searchTerm.setWord(requestDTO.term);
                 searchTerm.setFrequency(CustomMetadata.increment);
-                RepositoryDTO repositoryDTO = requestDTO.searchTermRepository.insertIntoRepo(requestDTO.searchTerm, searchTerm);
+                RepositoryDTO repositoryDTO = requestDTO.searchTermRepository.insertIntoRepo(requestDTO.term, searchTerm);
                 if (repositoryDTO.insertOperation == InsertOperation.ALREADY_EXISTS)
                     throw new SearchTermException();
             }
             adjustTopSuggestionsAtNode(searchTerm, node.getTopSuggestions());
             return searchTerm;
         }
-        char ch = requestDTO.searchTerm.charAt(index);
+        char ch = requestDTO.term.charAt(index);
         if (node.getNextChars()[ch] == null)
             node.getNextChars()[ch] = new Trie();
         SearchTerm searchTerm = traverseTheTrie(requestDTO,index + 1,node.getNextChars()[ch]);
@@ -82,7 +82,7 @@ public class TrieService {
 
     public TrieResponseDTO getTopSuggestions(TrieRequestDTO requestDTO){
         Trie wordRepositoryHead = requestDTO.wordRepository;
-        String term = requestDTO.searchTerm;
+        String term = requestDTO.term;
         TrieResponseDTO responseDTO = new TrieResponseDTO();
         responseDTO.topSuggestions = traverseTrieForTopSuggestions(term,0,wordRepositoryHead);
         return responseDTO;
