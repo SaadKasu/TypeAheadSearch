@@ -16,6 +16,7 @@ Some of the key features implemented in this project :
 -> Make the decay factor dynamic.
 -> Decay will be implemented such that every day that passes will reduce the value of every search count by a given factor. So for instance if today a word has 50 count and the decay factor is 2 tomorrow that same word will have 25count.
 -> New searches will add 1 to the value of the word.
+<<<<<<< HEAD
 
 
 Rev 2.0 :  
@@ -28,3 +29,5 @@ Rev 3.0 :
   -> Next step would involve writing test cases and supporting multithreading.
 
   
+=======
+>>>>>>> 1f2209d3583be9b8317f3409ab1100f349491673

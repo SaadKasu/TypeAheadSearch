@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="02cffacb-1eee-4922-ad6a-79535a256f92" name="Changes" comment="REV 2.0. Most functionality added. Testing pending">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controllers/ClientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controllers/ClientController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DTOs/TrieRequestDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DTOs/TrieRequestDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DTOs/TypeAheadSearchRequestDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DTOs/TypeAheadSearchRequestDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Helpers/SortSuggestions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Helpers/SortSuggestions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Services/TrieService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/TrieService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Services/TypeAheadSearchService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/TypeAheadSearchService.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Enum" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2YfnbdrJaJB91isZONmwXJ7j0Xg" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RunManager">
+    <configuration name="Client" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Client.Client" />
+      <module name="TypeAheadSearch" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Client.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Client" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="02cffacb-1eee-4922-ad6a-79535a256f92" name="Changes" comment="" />
+      <created>1700925579463</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1700925579463</updated>
+    </task>
+    <task id="LOCAL-00001" summary="Initial Commit with Models, Clients, Controllers and Service Structure">
+      <created>1700936874298</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1700936874298</updated>
+    </task>
+    <task id="LOCAL-00002" summary="REV 2.0. Most functionality added. Testing pending">
+      <created>1701020654425</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1701020654425</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Initial Commit with Models, Clients, Controllers and Service Structure" />
+    <MESSAGE value="REV 2.0. Most functionality added. Testing pending" />
+    <option name="LAST_COMMIT_MESSAGE" value="REV 2.0. Most functionality added. Testing pending" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/TypeAheadSearch$Client.ic" NAME="Client Coverage Results" MODIFIED="1701107342287" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>Client.*</FILTER>
+    </SUITE>
+  </component>
+</project>
