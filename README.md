@@ -24,10 +24,3 @@ Rev 2.0 :
   -> Added stratergies for decay
   -> Created Singleton approach for decay.
   
-Rev 3.0 :
-  -> Fixed a few bugs and have pushed the working code that can be tested.
-  -> Next step would involve writing test cases and supporting multithreading.
-
-  
-=======
->>>>>>> 1f2209d3583be9b8317f3409ab1100f349491673
